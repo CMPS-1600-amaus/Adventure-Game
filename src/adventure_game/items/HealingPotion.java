@@ -4,7 +4,7 @@ import adventure_game.Character;
 import adventure_game.Game;
 
 public class HealingPotion implements Consumable {
-    public void consume(Character owner, Character other){
+    public void consume(Character owner){
         int hitPoints = calculateHealing();
         int hitPointsFromMax = owner.getMaxHealth() - owner.getHealth();
 

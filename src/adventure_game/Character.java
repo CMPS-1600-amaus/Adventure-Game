@@ -6,9 +6,15 @@ import adventure_game.items.Consumable;
 abstract public class Character{
     private int maxHealth;
     private int health;
+
+    private int maxMana;
+    private int mana;
+
     private int baseDamage;
+
     private String name;
     private String description;
+
     private ArrayList<Consumable> items;
 
     // Character Conditions:
@@ -19,10 +25,12 @@ abstract public class Character{
     // E.g, if 2.0, the next attack will do double damage
     private double tempDamageBuff;
 
-    public Character(String name, int health, int damage, String description){
+    public Character(String name, int health, int mana, int damage, String description){
         this.name = name;
         this.maxHealth = health;
         this.health = health;
+        this.maxMana = mana;
+        this.mana = mana;
         this.baseDamage = damage;
         this.description = description;
         this.tempDamageBuff = 1.0;
@@ -40,6 +48,10 @@ abstract public class Character{
         return output;
     }
 
+    /**
+     * Get the name of this Character
+     * @return the name of this Character
+     */
     public String getName(){
         return this.name;
     }
@@ -50,6 +62,14 @@ abstract public class Character{
 
     public int getMaxHealth(){
         return this.maxHealth;
+    }
+
+    public int getMaxMana(){
+        return this.maxMana;
+    }
+
+    public int getMana(){
+        return this.mana;
     }
 
     public int getBaseDamage(){
@@ -105,7 +125,7 @@ abstract public class Character{
         }
     }
     
-    public void modifyHealth(int modifier){
+    public void modifyHealth(int modifier) {
         this.health += modifier;
         if(this.health < 0){
             this.health = 0;
@@ -115,9 +135,7 @@ abstract public class Character{
         }
     }
 
-    /*
-     * CONDITIONS
-     */
+    /* CONDITIONS */
     public void setAsVulnerable(int numTurns){
         this.turnsVulnerable = numTurns;
     }
@@ -155,12 +173,14 @@ abstract public class Character{
     }
 
     /**
-     * Set the temporary damage buffer. This is a multiplicative
-     * factor which will modify the damage for the next attack made
-     * by this Character.
+     * Set the temporary damage buffer. 
      * 
-     * @param buff the multiplicative factor for the next
-     * attack's damage.
+     * This is a multiplicative factor which will modify the damage 
+     * for the next attack made by this Character. After the next 
+     * attack, it will get reset back to 1.0
+     * 
+     * @param buff the multiplicative factor for the next attack's
+     * damage.
      */
     public void setTempDamageBuff(double buff){
         this.tempDamageBuff = buff;
@@ -179,7 +199,7 @@ abstract public class Character{
         }
         System.out.print("  Enter your choice: ");
         int choice = Game.in.nextInt();
-        items.get(choice-1).consume(owner, other);
+        items.get(choice-1).consume(owner);
         items.remove(choice-1);
     }
 
