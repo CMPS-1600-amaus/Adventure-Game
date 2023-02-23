@@ -48,9 +48,9 @@ To start writing and running JUnit tests, you need to enable java tests. First, 
 
 VS Code will download the required library and you're good to go.
 
-Here is the Documentation on [writing JUnit Tests](https://junit.org/junit5/docs/current/user-guide/#writing-tests). 
+Here is the documentation on [Writing JUnit Tests](https://junit.org/junit5/docs/current/user-guide/#writing-tests). 
 
-Also provided for you as an example to get you started is the beginning of a test suite `CharacterTests` for the class `Character`.
+Also provided to help you get you started is the beginning of a test suite `CharacterTests` for the class `Character`.
 
 Open up `CharacterTests`.
 
@@ -62,11 +62,13 @@ Every method labelled with the `@Test` annotation (so far just `testModifyHealth
 
 2. Also implement the `HealingPotionTests` class that is provided for you in the items package.
 
+As you add new classes and features to this project add tests for them as well.
+
 # Milestone 2: Character Creation
 
 Implement character creation. When the game starts, allow the user to create their own character.
 
-Through a series of messages and prompts, allow the user to enter a name for their character and then allow them to spend points to spend points to buy health, damage points, and mana.
+Through a series of messages and prompts, have the user to enter a name for their character and then allow them to spend stat points to buy health, damage points, and mana.
 
 The user will be given 20 stat points to spend. Example point values could be:
 - 1 stat point gives +10 health
