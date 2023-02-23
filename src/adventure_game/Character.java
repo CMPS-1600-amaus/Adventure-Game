@@ -13,7 +13,6 @@ abstract public class Character{
     private int baseDamage;
 
     private String name;
-    private String description;
 
     private ArrayList<Consumable> items;
 
@@ -25,14 +24,13 @@ abstract public class Character{
     // E.g, if 2.0, the next attack will do double damage
     private double tempDamageBuff;
 
-    public Character(String name, int health, int mana, int damage, String description){
+    public Character(String name, int health, int mana, int damage){
         this.name = name;
         this.maxHealth = health;
         this.health = health;
         this.maxMana = mana;
         this.mana = mana;
         this.baseDamage = damage;
-        this.description = description;
         this.tempDamageBuff = 1.0;
         items = new ArrayList<Consumable>();
     }
@@ -42,8 +40,8 @@ abstract public class Character{
         String output;
         output = "";
         output += "Name " + getName() + "\n";
-        output += getDescription() + "\n";
         output += "hp " + getHealth() + "\n";
+        output += "mana " + getMana() + "\n";
         output += "damage " + getBaseDamage() + "\n";
         return output;
     }
@@ -74,10 +72,6 @@ abstract public class Character{
 
     public int getBaseDamage(){
         return this.baseDamage;
-    }
-
-    public String getDescription(){
-        return this.description;
     }
 
     public boolean isAlive(){
@@ -194,7 +188,7 @@ abstract public class Character{
         int i = 1;
         System.out.printf("  Do you want to use:\n");
         for(Consumable item : items){
-            System.out.printf("    %d: %S\n", i, item);
+            System.out.printf("    %d: %S\n", i, item.getClass().getName());
             i++;
         }
         System.out.print("  Enter your choice: ");

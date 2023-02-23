@@ -10,7 +10,7 @@ public class CharacterTests{
     private Character c;
     @BeforeEach
     void setup(){
-        c = new Player("Hero", 100, 9, 7, "The hero");
+        c = new Player("Hero", 100, 9, 7);
     }
 
     @Test

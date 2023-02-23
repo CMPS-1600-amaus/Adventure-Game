@@ -6,6 +6,9 @@ package adventure_game;
  */
 
 import java.util.Scanner;
+
+import adventure_game.items.HealingPotion;
+
 import java.util.Random;
 
 public class Game {
@@ -20,7 +23,7 @@ public class Game {
         game.createPlayer();
         System.out.println(game.player.toString());
 
-        NPC opponent = new NPC("Geoff", 24, 9, 3, "Our doom!");
+        NPC opponent = new NPC("Geoff", 200, 0, 10);
         System.out.println(opponent.toString());
         game.enterCombat(opponent);
 
@@ -36,7 +39,8 @@ public class Game {
         /* Modify this method to allow the user to create their own player */
         /* The user will specify the player's name and description, and spend */
         /* 20 points on health, mana, and baseDamage as they see fit. */
-        player = new Player("The Hero", 15, 9, 3, "The hero of the game.");
+        player = new Player("The Hero", 100, 9, 7);
+        player.obtain(new HealingPotion());
     }
 
     public void enterCombat(NPC opponent){
