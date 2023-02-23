@@ -62,7 +62,7 @@ Every method labelled with the `@Test` annotation (so far just `testModifyHealth
 
 2. Also implement the `HealingPotionTests` class that is provided for you in the items package.
 
-As you add new classes and features to this project add tests for them as well.
+As you add new classes and features to your project, add tests for them as well.
 
 # Milestone 2: Character Creation
 
