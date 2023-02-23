@@ -44,7 +44,7 @@ VS Code makes it easy to get setup with JUnit and to run JUnit Tests. The VS Cod
 
 To start writing and running JUnit tests, you need to Enable Java Testing. First, in VS Code, open any java source file to force VS Code to "open java projects" and enable java extensions. Then you will have a test beaker "Testing" option in your left menu. From there, click on "Enable Java Tests"
 
-<img src = "figures/vs-code-testing.png" width = "60%">
+<img src = "figures/vs-code-testing.png" width = "25%">
 
 VS Code will download the required library and you're good to go.
 
