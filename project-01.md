@@ -170,6 +170,8 @@ Add experience points and leveling up to the game! When a player levels up, boos
 
 Add multiple levels (e.g, dungeons to explore) to the game. Once a player wins one level, they move on to the next until they lose or beat your game. Boss Battle? You may share your maps with each other. Add your name to the top of any maps that you create. While you may share maps, each of your game implementations must be individual and independently produced.
 
+Document any bonus features you implement in `README.md` in the root project directory.
+
 # Acknowledgements
 
 Thank you to Ted Holmberg for inspiration, ideas, and mechanics which have ended up in this project.
