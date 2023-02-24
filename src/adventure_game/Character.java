@@ -167,7 +167,7 @@ abstract public class Character{
     }
 
     /**
-     * Set the temporary damage buffer. 
+     * Set the temporary damage buff. 
      * 
      * This is a multiplicative factor which will modify the damage 
      * for the next attack made by this Character. After the next 
