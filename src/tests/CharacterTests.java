@@ -1,8 +1,12 @@
-package adventure_game;
+package tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
+
+import adventure_game.Character;
+import adventure_game.Player;
+
 import org.junit.jupiter.api.BeforeEach;
 
 public class CharacterTests{
