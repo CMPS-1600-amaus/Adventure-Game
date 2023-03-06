@@ -42,7 +42,7 @@ The best way to write unit tests for Java is to use JUnit.
 
 VS Code makes it easy to get setup with JUnit and to run JUnit Tests. The VS Code Extension "Extension Pack for Java" bundles JUnit Testing into VS Code for you. 
 
-To start writing and running JUnit tests, you need to enable java tests. First, in VS Code, open any java source file to force VS Code to "open java projects" and enable java extensions. Then you will have a test beaker Testing option in your left menu. From there, click on "Enable Java Tests" and select "JUnit Jupiter".
+To start writing and running JUnit tests, you need to enable java tests. First, in VS Code, open any java source file to force VS Code to "open java projects" and enable java extensions. Then you will have a test beaker Testing option in your left menu. From there, click on "Enable Java Tests". Select "JUnit Jupiter".
 
 <img src = "figures/vs-code-testing.png" width = "70%">
 
