@@ -11,8 +11,9 @@ public class HealingPotion implements Consumable {
         if(hitPoints > hitPointsFromMax){
             hitPoints = hitPointsFromMax;
         }
-        System.out.printf("You heal for %d points, back up to %d/%d.\n", hitPoints, owner.getHealth(), owner.getMaxHealth());
+
         owner.modifyHealth(hitPoints);
+        System.out.printf("You heal for %d points, back up to %d/%d.\n", hitPoints, owner.getHealth(), owner.getMaxHealth());
     }
 
     private int calculateHealing(){
