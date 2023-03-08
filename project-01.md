@@ -18,6 +18,8 @@ Requirements:
 2) Javadoc comments for classes and all non private methods of all classes.
 3) Unit Tests for the `Character` class and `HealingPotion` class.
 
+Note: Get started on this milestone early. When starting any new project and using new tools, you will likely run into setup issues that you need to solve. If you wait until the last minute, you will not have the resources you would have otherwise had (access to instructors and TAs) to solve them and may not be able to complete your milestone on time.
+
 ## UML Diagrams
 
 Create a UML Diagram containing all classes in this project. You may create the however you like, but add your final file(s) in PDF format to a `uml` directory in the root directory of your project.
