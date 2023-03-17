@@ -22,7 +22,7 @@ When you implement a program, the best way to do so is in an incremental fashion
 
 Your workflow with git should match your workflow with your code. That is, you should be using git in a small incremental fashion as well. After you complete a small piece of your program, add, commit, and push it to GitHub. Commits are supposed to be small. There are two major benefits to working in this way.
 
-First, by doing so, you build a history of your project. Commits are snapshots that you can return to. If you deleted something, or need to go back to an old version, if you have committed it, you can do so.
+First, by doing so, you build a history of your project. Commits are snapshots that you can return to. If you deleted something, or need to go back to an old version, if you have committed it, you can do so. The smaller your commits are, the more fine-grained control you have over returning to previous versions of you project.
 
 Second, every time you push to GitHub, you are pushing your latest commits to a remote backup. If something happens to your local project, or to your computer, you can restore your project from GitHub. This can be and has been a lifesaver for countless developers.
 
