@@ -75,7 +75,7 @@ extensions. After this, you will have a test beaker Testing option in
 your left menu. From there, click on "Enable Java Tests". Select "JUnit
 Jupiter".
 
-<img src = "figures/vs-code-testing.png" width = "50%" alt="From the beaker icon in the left menu, click on Enable Java Tests, then
+<img src = "figures/vs-code-testing.png" width = "40%" alt="From the beaker icon in the left menu, click on Enable Java Tests, then
 then select JUnit Jupiter from the drowndown menu">
 
 VS Code will download the JUnit libary and place it in a `lib` or `test-lib`
