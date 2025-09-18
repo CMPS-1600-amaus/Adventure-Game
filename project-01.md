@@ -64,6 +64,8 @@ more complicated than trivial getters should be tested.
 
 The best way to write unit tests for Java is to use JUnit.
 
+##### JUnit Setup
+
 To run JUnit tests in VS Code, first install the VS Code Extension "Extension
 Pack for Java" which bundles "Test Runner for Java" extension within it.
 
@@ -73,13 +75,31 @@ extensions. After this, you will have a test beaker Testing option in
 your left menu. From there, click on "Enable Java Tests". Select "JUnit
 Jupiter".
 
-<img src = "figures/vs-code-testing.png" width = "70%" alt="From the beaker icon in the left menu, click on Enable Java Tests, then
+<img src = "figures/vs-code-testing.png" width = "50%" alt="From the beaker icon in the left menu, click on Enable Java Tests, then
 then select JUnit Jupiter from the drowndown menu">
 
 VS Code will download the JUnit libary and place it in a `lib` or `test-lib`
 directory in your project. It may also create a `.vscode` directory containing
 `settings.json`. This file will tell VS Code where to find any referenced
 libraries (in this case, JUnit) for your project.
+
+<img src = "figures/java-tests-enabled.png" width = "100%" alt=".vscode/settings.json and test-lib/junit-...-.jar have been added to my project after enabling java tests.">
+
+If JUnit isn't working for you after Enabling Java Tests, check to see if
+`.vscode/settings.json` was created. If not create it and add the same contents
+as shown in the screenshot above:
+
+```json
+{
+    "java.project.referencedLibraries": [
+        "test-lib/**/*.jar"
+    ]
+}
+```
+
+If different, replace `test-lib` with the location of your JUnit jar file.
+
+##### Testing Instructions
 
 Here is the documentation on [Writing JUnit Tests](https://junit.org/junit5/docs/current/user-guide/#writing-tests).
 
