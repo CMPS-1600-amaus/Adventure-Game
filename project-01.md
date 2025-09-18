@@ -9,9 +9,7 @@ Deadlines:
 - Milestone 2: **Friday October 10th**
 - Milestone 3: **Monday October 20th**
 
-## Milestones
-
-### Milestone 1: Documentation and Testing
+## Milestone 1: Documentation and Testing
 
 For Milestone 1, you will add documentation and unit tests for the existing
 classes of this projects.
@@ -28,14 +26,14 @@ If you wait until the last minute, you will not have the resources you would
 have otherwise had (access to instructors and TAs) to solve them and may not be
 able to complete your milestone on time.
 
-#### UML Diagrams
+### UML Diagrams
 
 Create a UML Diagram containing all classes in this project. You may create
 them however you like (hand drawn, using drawing software, using any online
 tool; all file!), but add your final file(s) in PDF, png, or jpeg format
 (preference PDF) to a `uml` directory in the root directory of your project.
 
-#### Javadoc Comments
+### Javadoc Comments
 
 Add Javadoc comments to all classes. Each class should have a javadoc comment
 at the top of the class. All non-private methods should have javadoc comments.
@@ -57,14 +55,14 @@ to view it!
 
 If you add more packages to your project, add them to this command.
 
-#### Unit Tests
+### Unit Tests
 
 Add Unit Tests for the `Character` and `HealingPotion` classes. All methods
 more complicated than trivial getters should be tested.
 
 The best way to write unit tests for Java is to use JUnit.
 
-##### JUnit Setup
+#### JUnit Setup
 
 To run JUnit tests in VS Code, first install the VS Code Extension "Extension
 Pack for Java" which bundles "Test Runner for Java" extension within it.
@@ -97,9 +95,79 @@ as shown in the screenshot above:
 }
 ```
 
-If different, replace `test-lib` with the location of your JUnit jar file.
+If the location for your junit jar is different, replace `test-lib` with the
+correct location.
 
-##### Testing Instructions
+#### JUnit on the Terminal
+
+If JUnit is not working in VS Code, reach out to your instructor, TA, or CA for
+assistance.
+
+In the meantime, as an alternative, you can run JUnit tests on the terminal.
+
+Open a terminal and navigate into the root directory of your project (if you
+open a terminal though a VS Code window with your project open, you will
+automatically be placed in your project directory).
+
+*Compile your project:*
+
+On the terminal execute the following command
+
+`javac -cp .:test-lib/junit-platform-console-standalone-1.13.0-M3.jar -d classes src/**/*.java`
+
+> This assumes that my JUnit jar was placed in a `test-lib` directory in my
+project. Update as needed to ensure that the path and filename for your JUnit
+jar file is correct.
+
+*Execute all JUnit tests:*
+
+`java -jar test-lib/junit-platform-console-standalone-1.13.0-M3.jar execute --classpath=classes --scan-classpath`
+
+> Again, update the path to the JUnit jar as needed
+
+If you run this for the template code, you should see:
+
+```
+$ java -jar test-lib/junit-platform-console-standalone-1.13.0-M3.jar execute --classpath=classes --scan-classpath
+main*@Adventure-Game
+
+💚 Thanks for using JUnit! Support its development at https://junit.org/sponsoring
+
+╷
+├─ JUnit Platform Suite ✔
+├─ JUnit Jupiter ✔
+│  ├─ CharacterTests ✔
+│  │  └─ testModifyHealth() ✔
+│  └─ HealingPotionTests ✔
+│     └─ testHealingPotion() ✔
+└─ JUnit Vintage ✔
+
+Test run finished after 65 ms
+[         5 containers found      ]
+[         0 containers skipped    ]
+[         5 containers started    ]
+[         0 containers aborted    ]
+[         5 containers successful ]
+[         0 containers failed     ]
+[         2 tests found           ]
+[         0 tests skipped         ]
+[         2 tests started         ]
+[         0 tests aborted         ]
+[         2 tests successful      ]
+[         0 tests failed          ]
+```
+
+*Running your game from the terminal:*
+
+If you compiled as above, you can run your game from the terminal with the
+following command.
+
+`java -cp classes adventure_game.Game`
+
+As long as you can run your game through VS Code, you don't need to do this, but
+it is often useful to know how to do things manually yourself!
+
+#### Testing Instructions
 
 Here is the documentation on [Writing JUnit Tests](https://junit.org/junit5/docs/current/user-guide/#writing-tests).
 
@@ -121,7 +189,7 @@ the items package.
 
 As you add new classes and features to your project, add tests for them as well.
 
-### Milestone 2: Character Creation
+## Milestone 2: Character Creation
 
 Implement character creation. When the game starts, allow the user to create
 their own character.
@@ -139,9 +207,10 @@ The user will be given 20 stat points to spend. Example point values could be:
 After they have spent all their points, create their character and let them
 start playing.
 
-#### Mana
+### Mana
 
-Mana is an addition beyond what we did in class. Mana allows a Character to cast a spell.
+Mana is an addition beyond what we did in class. Mana allows a Character to cast
+a spell.
 
 Add two new options to the Player's take turn menu:
 
@@ -154,25 +223,28 @@ Charging up mana increments the Player's mana by 1.
 
 > Feel free to modify these magical mechanics.
 
-#### Items
+### Items
 
-Also included in the game are items. A `Consumable` interface is provided. It allows you to create subclasses that are consumable. Each `Consumable` must implement the `consume` method which manifests whatever effect the consumable object has. One example item is provided for you, the `HealingPotion`.
+Also included in the game are items. A `Consumable` interface is provided. It
+allows you to create subclasses that are consumable. Each `Consumable` must
+implement the `consume` method which manifests whatever effect the consumable
+object has. One example item is provided for you, the `HealingPotion`.
 
 Add atleast one additional `Consumable` item.
 
-#### Documentation and Testing
+### Documentation and Testing
 
 As you add new methods and classes to this project, document and test them. In
 fact, do this first! Write javadoc comments for method stubs, write tests for
 them, then implement the methods.
 
-### Milestone 3: Exploration
+## Milestone 3: Exploration
 
 Add exploration to your game! Allow the player to explore a series of connected
 rooms, looking for a portkey. If they encounter any NPCs, they must fight them.
 If they find the portkey, they win.
 
-#### Representing the Layout
+### Representing the Layout
 
 Each room will be an object with references to 4 other rooms, representing
 potential exits in each of the cardinal directions: East, North, West, South.
@@ -191,15 +263,20 @@ Create a `Room` class with the following attributes:
 
 Add methods as you see fit.
 
-> If there is an opponent in a room, that opponent must be defeated before any items can be obtained.
+> If there is an opponent in a room, that opponent must be defeated before any
+items can be obtained.
 
-#### Reading in the layout from file
+### Reading in the layout from file
 
-You will read in a map (could be a dungeon, mansion, hospital, cave system, etc..) containing the layout of the rooms from a file. The format of the file is as follows:
+You will read in a map (could be a dungeon, mansion, hospital, cave system,
+etc..) containing the layout of the rooms from a file. The format of the file is
+as follows:
 
-- Any lines that begin with a `#` are comments and should be ignored when the file is read in.
+- Any lines that begin with a `#` are comments and should be ignored when the
+file is read in.
 
-- The first non-comment line of the file is the number $n$, the number of rooms in the mansion.
+- The first non-comment line of the file is the number $n$, the number of rooms
+in the mansion.
 
 - The next $n$ lines contain three values separated by colons `':'`
     1. a room identifier given as an int
@@ -223,7 +300,7 @@ your map to verify that your game behaves as expected.
 Create atleast one map of your own design. It may also be easiest to create
 atleast one very simple map for testing and debugging purposes.
 
-#### Implementing Exploration
+### Implementing Exploration
 
 The player will always start in room 0. Randomly assign NPCs and items to the
 other rooms.
@@ -240,27 +317,27 @@ stats are persistent between combats. That is, however much health and mana they
 had at the end of the last combat will be how much they start with for the next
 one.
 
-#### Documentation and Testing
+### Documentation and Testing
 
 As always, add documentation and unit tests for the classes and methods that you
 create.
 
-## Customization
+# Customization
 
 Feel free to customize the mechanics and change the context to write the game
 that you want to create! You may add classes, methods, or features to this game
 as you see fit. Document any custom features and modifications that you make in
 your [README.md](README.md).
 
-## Bonus
+# Bonus
 
-### Opportunity 1 (10 pts)
+## Opportunity 1 (10 pts)
 
 Add experience points and leveling up to the game! When a player levels up,
 boost their health and mana back up to max and allow them to spend more stat
 points to increase their stats!
 
-### Opportunity 2 (10 pts)
+## Opportunity 2 (10 pts)
 
 Add multiple levels (e.g, dungeons to explore) to the game. Once a player wins
 one level, they move on to the next until they lose or beat your game. Boss
@@ -270,11 +347,11 @@ implementations must be individual and independently produced.
 
 Document any bonus features you implement in your [README.md](README.md).
 
-### Opportunity 3 (15 pts)
+## Opportunity 3 (15 pts)
 
 Make your project graphical rather than text based!
 
-## Acknowledgements
+# Acknowledgements
 
 Thank you to Ted Holmberg for inspiration, ideas, and mechanics which have ended
 up in this project.
