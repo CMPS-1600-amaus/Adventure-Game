@@ -1,56 +1,20 @@
 # CMPS 1600 Project 01
 
-In this project, you will complete the text-based adventure game we started in class.
+In this project, you will complete the text-based adventure game we started in
+class!
 
 Deadlines:
 
-- Milestone 1: **Monday March 6th**
-- Milestone 2: **Wednesday March 15th** 
-- Milestone 3: **Wendesday March 22nd**
-
-# Logistics and Git
-
-This project is hosted on GitHub classrooms. If you aren't familiar with GitHub, it is an online platform for hosting git repositories. 
-
-Many fundamental open-source projects ([linux], [openSSH], [rust], [python], [tensorflow], [react], [git itself]), personal projects ([shell configurations], [disassembled pokemon red/blue]), historical projects ([DOOM], [MS-DOS], [Apollo 11]), and scientific projects ([AlphaFold], [CERN], [NCAR], [NASA]), among others are hosted there. 
-
-GitHub Classrooms allows us to create and manage your projects. We create a project template which, when you accept the assignment link, is copied into a private repository for you. You then work in this private repository, committing and pushing your work as you complete it.
-
-## Git Workflow
-
-When you implement a program, the best way to do so is in an incremental fashion. Implement a small piece, compile, test. Repeat until the program is complete.
-
-Your workflow with git should match your workflow with your code. That is, you should be using git in a small incremental fashion as well. After you complete a small piece of your program, add, commit, and push it to GitHub. Commits are supposed to be small. There are two major benefits to working in this way.
-
-First, by doing so, you build a history of your project. Commits are snapshots that you can return to. If you deleted something, or need to go back to an old version, if you have committed it, you can do so. The smaller your commits are, the more fine-grained control you have over returning to previous versions of you project.
-
-Second, every time you push to GitHub, you are pushing your latest commits to a remote backup. If something happens to your local project, or to your computer, you can restore your project from GitHub. This can be and has been a lifesaver for countless developers.
-
-Just as you compile and test your programs early and often, you should be committing and pushing your progress as well.
-
-### Learning Git
-
-To learn more about git, we recommend MIT's [Missing Semester's "Version Control (Git)" Page](https://missing.csail.mit.edu/2020/version-control/).
-
-A great reference is the free book [Pro Git](https://git-scm.com/book/en/v2)
-
-You may find [Oh Shit, Git!?!](https://ohshitgit.com/) useful at times.
-
-## Submitting your Project
-
-To submit each milestone, you must submit a link to your repository to canvas. Without a submitted link, your milestone submission will receive a 0.
-
-Why? Submitting your links makes grading possible. Since your github usernames do not match your Tulane usernames, without your links, finding your project amounts to a linear search through all projects. This is frustrating, and no one wants frustrated graders grading their projects.
-
-Speaking of which, make it as easy as possible for the graders to grade your projects. Add all special instructions they should know to your [README.md](README.md), for example special instructions on running your game. You should also detail any special decisions you made, like replacing certain mechanics with your own. Finally, tell the graders about all bonus opportunities that you implemented.
-
-Do these things, and you will receive all credit that you deserve.
+- Milestone 1: **Friday September 26th**
+- Milestone 2: **Friday October 10th** 
+- Milestone 3: **Monday October 20th**
 
 # Milestones
 
 ## Milestone 1: Documentation and Testing
 
-For Milestone 1, you will add documentation and unit tests for the existing classes of this projects.
+For Milestone 1, you will add documentation and unit tests for the existing 
+classes of this projects.
 
 Requirements:
 
@@ -58,33 +22,57 @@ Requirements:
 2) Javadoc comments for classes and all non private methods of all classes.
 3) Unit Tests for the `Character` class and `HealingPotion` class.
 
-Note: Get started on this milestone early. When starting any new project and using new tools, you will likely run into setup issues that you need to solve. If you wait until the last minute, you will not have the resources you would have otherwise had (access to instructors and TAs) to solve them and may not be able to complete your milestone on time.
+Note: Get started on this milestone early. When starting any new project and
+using new tools, you will likely run into setup issues that you need to solve. 
+If you wait until the last minute, you will not have the resources you would 
+have otherwise had (access to instructors and TAs) to solve them and may not be 
+able to complete your milestone on time.
 
 ### UML Diagrams
 
-Create a UML Diagram containing all classes in this project. You may create the however you like, but add your final file(s) in PDF format to a `uml` directory in the root directory of your project.
+Create a UML Diagram containing all classes in this project. You may create 
+them however you like (hand drawn, using drawing software, using any online 
+tool; all file!), but add your final file(s) in PDF, png, or jpeg format 
+(preference PDF) to a `uml` directory in the root directory of your project.
 
 ### Javadoc Comments
 
-Add Javadoc comments to all classes. Each class should have a javadoc comment at the top of the class. All non-private methods should have javadoc comments.
+Add Javadoc comments to all classes. Each class should have a javadoc comment 
+at the top of the class. All non-private methods should have javadoc comments.
 
-To serve as an example, javadoc comments have been provided for the `Consumable` interface (more on this below) and for the Character's `setTempDamageBuff` method.
+To serve as an example, javadoc comments have been provided for the 
+`Consumable` interface (more on this below) and for the Character's 
+`setTempDamageBuff` method.
 
-Compile your javadoc comments into a javadoc website in a `docs` directory in the root directory of your project.
+Compile your javadoc comments into a javadoc website in a `docs` directory in 
+the root directory of your project.
 
-To do so, on the terminal, located in your project's root directory, issue the following command:
+To do so, on the terminal, located in your project's root directory, issue the 
+following command:
 
-`javadoc -link https://docs.oracle.com/en/java/javase/19/docs/api -sourcepath ./src/ adventure_game adventure_game.items -d ./docs`
+`javadoc -link https://docs.oracle.com/en/java/javase/25/docs/api -sourcepath ./src/ adventure_game adventure_game.items -d ./docs`
+
+Once you generate the javadoc website, you can open `index.html` in a webbrowser
+to view it!
+
+If you add more packages to your project, add them to this command.
 
 ### Unit Tests
 
-Add Unit Tests for the `Character` and `HealingPotion` classes. All methods more complicated than trivial getters should be tested.
+Add Unit Tests for the `Character` and `HealingPotion` classes. All methods 
+more complicated than trivial getters should be tested.
 
 The best way to write unit tests for Java is to use JUnit.
 
-VS Code makes it easy to get setup with JUnit and to run JUnit Tests. The VS Code Extension "Extension Pack for Java" bundles JUnit Testing into VS Code for you. 
+VS Code makes it easy to get setup with JUnit and to run JUnit Tests. The VS
+Code Extension "Extension Pack for Java" bundles JUnit Testing into VS Code
+for you. 
 
-To start writing and running JUnit tests, you need to enable java tests. First, in VS Code, open any java source file to force VS Code to "open java projects" and enable java extensions. Then you will have a test beaker Testing option in your left menu. From there, click on "Enable Java Tests". Select "JUnit Jupiter".
+To start writing and running JUnit tests, you need to enable java tests. First, 
+in VS Code, open any java source file to force VS Code to "open java projects" 
+and enable java extensions. Then you will have a test beaker Testing option in 
+your left menu. From there, click on "Enable Java Tests". Select "JUnit 
+Jupiter".
 
 <img src = "figures/vs-code-testing.png" width = "70%">
 
@@ -92,32 +80,40 @@ VS Code will download the required library and you're good to go.
 
 Here is the documentation on [Writing JUnit Tests](https://junit.org/junit5/docs/current/user-guide/#writing-tests). 
 
-Also provided to help you get you started is the beginning of a test suite `CharacterTests` for the class `Character`.
+Also provided to help you get you started is the beginning of a test suite 
+`CharacterTests` for the class `Character`.
 
 Open up `CharacterTests`.
 
-You see that there is a `@BeforeEach` annotation above the `setup()` method. `setup()` will be run before each test.
+You see that there is a `@BeforeEach` annotation above the `setup()` method. 
+`setup()` will be run before each test.
 
-Every method labelled with the `@Test` annotation (so far just `testModifyHealth`) is a test method.
+Every method labelled with the `@Test` annotation (so far just 
+`testModifyHealth`) is a test method.
 
 1. Add test methods for all methods except for trivial getters 
 
-2. Also implement the `HealingPotionTests` class that is provided for you in the items package.
+2. Also implement the `HealingPotionTests` class that is provided for you in 
+the items package.
 
 As you add new classes and features to your project, add tests for them as well.
 
 ## Milestone 2: Character Creation
 
-Implement character creation. When the game starts, allow the user to create their own character.
+Implement character creation. When the game starts, allow the user to create 
+their own character.
 
-Through a series of messages and prompts, have the user to enter a name for their character and then allow them to spend stat points to buy health, damage points, and mana.
+Through a series of messages and prompts, have the user to enter a name for 
+their character and then allow them to spend stat points to buy health, damage 
+points, and mana.
 
 The user will be given 20 stat points to spend. Example point values could be:
 - 1 stat point gives +10 health
 - 1 stat point gives +1 to their base damage
 - 1 stat point gives +3 mana
 
-After they have spent all their points, create their character and let them start playing.
+After they have spent all their points, create their character and let them 
+start playing.
 
 ### Mana
 
@@ -152,6 +148,7 @@ Add exploration to your game! Allow the player to explore a series of connected 
 Each room will be an object with references to 4 other rooms, representing potential exits in each of the cardinal directions: East, North, West, South. Rooms may not have exits in all directions, in which case, all directions which are not an exit are `null`. A room may also contain an NPC to fight and 0 or more objects.
 
 Create a `Room` class with the following attributes:
+
 - `Room east`
 - `Room north`
 - `Room west`
