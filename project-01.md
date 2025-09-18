@@ -78,16 +78,12 @@ Jupiter".
 <img src = "figures/vs-code-testing.png" width = "40%" alt="From the beaker icon in the left menu, click on Enable Java Tests, then
 then select JUnit Jupiter from the drowndown menu">
 
-![From the beaker icon in the left menu, click on Enable Java Tests, then then select JUnit Jupiter from the drowndown menu](figures/vs-code-testing.png){ width=50% }
-
 VS Code will download the JUnit libary and place it in a `lib` or `test-lib`
 directory in your project. It may also create a `.vscode` directory containing
 `settings.json`. This file will tell VS Code where to find any referenced
 libraries (in this case, JUnit) for your project.
 
 <img src = "figures/java-tests-enabled.png" width = "100%" alt=".vscode/settings.json and test-lib/junit-...-.jar has been added to my project after enabling java tests.">
-
-![.vscode/settings.json and test-lib/junit-...-.jar has been added to my project after enabling java tests.](figures/java-tests-enabled.png)
 
 If JUnit isn't working for you after Enabling Java Tests, check to see if
 `.vscode/settings.json` was created. If not create it and add the same contents
