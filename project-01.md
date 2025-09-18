@@ -115,13 +115,17 @@ On the terminal execute the following command
 
 `javac -cp .:test-lib/junit-platform-console-standalone-1.13.0-M3.jar -d classes src/**/*.java`
 
-> This assumes that my JUnit jar was placed in a `test-lib` directory in my
+This command compiles all java source files in your project and placed the compiled `.class` files in a `classes` directory.
+
+> It assumes that my JUnit jar was placed in a `test-lib` directory in my
 project. Update as needed to ensure that the path and filename for your JUnit
 jar file is correct.
 
-*Execute all JUnit tests:*
+*Execute JUnit tests:*
 
 `java -jar test-lib/junit-platform-console-standalone-1.13.0-M3.jar execute --classpath=classes --scan-classpath`
+
+This command searches for an executes all JUnit tests in your project.
 
 > Again, update the path to the JUnit jar as needed
 
@@ -156,6 +160,10 @@ Test run finished after 65 ms
 [         2 tests successful      ]
 [         0 tests failed          ]
 ```
+
+To run a single test suite (for example, `CharacterTests`):
+
+`java -jar test-lib/junit-platform-console-standalone-1.13.0-M3.jar --classpath=classes -c tests.CharacterTests`
 
 *Running your game from the terminal:*
 
